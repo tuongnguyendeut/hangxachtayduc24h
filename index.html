@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hơn 500 sản phẩm chính hãng nội địa Đức — Baby, Mẹ Bầu, Mỹ phẩm, Thực phẩm chức năng. Ship COD toàn quốc." />
+  <title>hangxachtayduc24h.com — Hàng xách tay Đức chính hãng</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1a5276;
+      --primary-light: #2471a3;
+      --accent: #e74c3c;
+      --accent-hover: #c0392b;
+      --gold: #f39c12;
+      --bg: #f8f9fa;
+      --white: #ffffff;
+      --text: #2c3e50;
+      --text-light: #7f8c8d;
+      --border: #e0e0e0;
+      --german-red: #DD0000;
+      --german-gold: #FFCE00;
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow-hover: 0 6px 24px rgba(0,0,0,0.14);
+      --radius: 8px;
+    }
+
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* TOP BAR */
+    .topbar {
+      background: var(--primary);
+      color: #fff;
+      font-size: 12.5px;
+      padding: 7px 0;
+      text-align: center;
+    }
+    .topbar .tb-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+    .topbar span { display: flex; align-items: center; gap: 6px; }
+
+    /* HEADER */
+    header {
+      background: var(--white);
+      border-bottom: 3px solid var(--german-red);
+      position: sticky; top: 0; z-index: 999;
+      box-shadow: var(--shadow);
+    }
+    .header-inner { max-width: 1200px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 46px; height: 46px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; color: #fff; }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-text .name { font-size: 17px; font-weight: 800; color: var(--primary); line-height: 1.1; }
+    .logo-text .tagline { font-size: 11px; color: var(--text-light); }
+
+    .header-search { flex: 1; max-width: 480px; display: flex; gap: 0; }
+    .header-search input { flex: 1; border: 2px solid var(--border); border-right: none; border-radius: var(--radius) 0 0 var(--radius); padding: 9px 14px; font-size: 14px; outline: none; transition: border-color .2s; }
+    .header-search input:focus { border-color: var(--primary-light); }
+    .header-search button { background: var(--primary); color: #fff; border: none; padding: 9px 18px; border-radius: 0 var(--radius) var(--radius) 0; cursor: pointer; font-size: 15px; }
+
+    .header-actions { display: flex; align-items: center; gap: 14px; }
+    .header-phone { display: flex; flex-direction: column; align-items: center; font-size: 12px; color: var(--text-light); }
+    .header-phone a { font-weight: 700; color: var(--german-red); font-size: 15px; }
+    .cart-btn { position: relative; background: var(--accent); color: #fff; border: none; padding: 9px 16px; border-radius: var(--radius); cursor: pointer; font-size: 14px; display: flex; align-items: center; gap: 6px; font-weight: 600; }
+    .cart-count { background: var(--german-gold); color: #000; border-radius: 50%; width: 18px; height: 18px; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+    /* MEGA NAV */
+    nav { background: var(--primary); }
+    nav .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; }
+    .nav-item { position: relative; }
+    .nav-item > a { display: block; padding: 12px 16px; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; transition: background .2s; }
+    .nav-item > a:hover, .nav-item:hover > a { background: var(--primary-light); }
+    .nav-item .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid var(--border); border-radius: 0 0 var(--radius) var(--radius); min-width: 220px; z-index: 100; box-shadow: var(--shadow-hover); }
+    .nav-item:hover .dropdown { display: flex; flex-direction: column; }
+    .mega-menu { min-width: 700px !important; flex-direction: row !important; flex-wrap: wrap; padding: 16px; gap: 0; }
+    .mega-col { flex: 1; min-width: 160px; padding: 0 12px; }
+    .mega-col h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--primary); border-bottom: 2px solid var(--german-gold); padding-bottom: 6px; margin-bottom: 8px; font-weight: 700; }
+    .mega-col a { display: block; font-size: 13px; color: var(--text); padding: 4px 0; transition: color .15s; }
+    .mega-col a:hover { color: var(--primary-light); }
+    .dropdown:not(.mega-menu) a { display: block; padding: 10px 16px; font-size: 13.5px; color: var(--text); border-bottom: 1px solid var(--bg); transition: background .15s; }
+    .dropdown:not(.mega-menu) a:hover { background: var(--bg); color: var(--primary); }
+    .nav-all-products { background: var(--german-gold); }
+    .nav-all-products > a { color: #000 !important; font-weight: 700; }
+    .nav-all-products > a:hover { background: #e6b800 !important; }
+
+    /* HERO BANNER */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #0d3b67 60%, #1a5276 100%);
+      color: #fff;
+      padding: 60px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-content { position: relative; max-width: 800px; margin: 0 auto; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 50px; padding: 6px 16px; font-size: 13px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(26px, 5vw, 44px); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+    .hero h1 span { color: var(--german-gold); }
+    .hero p { font-size: 16px; opacity: .88; margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: var(--radius); font-size: 15px; font-weight: 700; cursor: pointer; border: none; transition: all .2s; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn-secondary { background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.5); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+    .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 44px; flex-wrap: wrap; }
+    .hero-stat { text-align: center; }
+    .hero-stat strong { display: block; font-size: 28px; font-weight: 900; color: var(--german-gold); }
+    .hero-stat span { font-size: 12px; opacity: .8; }
+
+    /* TRUST BADGES */
+    .trust-bar { background: #fff; border-bottom: 1px solid var(--border); }
+    .trust-inner { max-width: 1200px; margin: 0 auto; padding: 16px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 12px; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13.5px; }
+    .trust-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 20px; }
+
+    /* SECTION COMMON */
+    .section { max-width: 1200px; margin: 0 auto; padding: 40px 16px; }
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+    .section-title { font-size: 22px; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+    .section-title::after { content: ''; flex: 0 0 50px; height: 3px; background: var(--german-red); border-radius: 2px; margin-left: 10px; }
+    .see-all { color: var(--primary-light); font-size: 13.5px; font-weight: 600; display: flex; align-items: center; gap: 4px; transition: gap .2s; }
+    .see-all:hover { gap: 8px; }
+
+    /* CATEGORIES GRID */
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
+    .cat-card { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); padding: 18px 12px; text-align: center; cursor: pointer; transition: all .2s; }
+    .cat-card:hover { border-color: var(--primary-light); box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .cat-icon { font-size: 30px; margin-bottom: 8px; }
+    .cat-name { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .cat-count { font-size: 11.5px; color: var(--text-light); }
+
+    /* PRODUCT GRID */
+    .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; }
+    .prod-card { background: #fff; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; transition: all .2s; position: relative; }
+    .prod-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .prod-badge { position: absolute; top: 8px; left: 8px; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; z-index: 2; }
+    .prod-badge.new { background: var(--primary); }
+    .prod-img { width: 100%; aspect-ratio: 1; background: linear-gradient(135deg, #eef2ff, #dde7f5); display: flex; align-items: center; justify-content: center; font-size: 52px; position: relative; overflow: hidden; }
+    .prod-img .flag { position: absolute; top: 8px; right: 8px; font-size: 18px; }
+    .prod-info { padding: 12px; }
+    .prod-brand { font-size: 11px; color: var(--primary-light); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
+    .prod-name { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 6px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .prod-rating { display: flex; align-items: center; gap: 4px; margin-bottom: 8px; }
+    .stars { color: var(--german-gold); font-size: 13px; }
+    .rating-count { font-size: 11px; color: var(--text-light); }
+    .prod-price { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .price-main { font-size: 16px; font-weight: 800; color: var(--accent); }
+    .price-old { font-size: 12px; color: var(--text-light); text-decoration: line-through; }
+    .add-cart { width: 100%; margin-top: 10px; background: var(--primary); color: #fff; border: none; padding: 9px; border-radius: var(--radius); font-size: 13px; font-weight: 600; cursor: pointer; transition: background .2s; display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .add-cart:hover { background: var(--primary-light); }
+
+    /* BANNER MID */
+    .banner-mid { background: linear-gradient(90deg, #1a5276, #2471a3); color: #fff; padding: 40px 16px; margin: 8px 0; }
+    .banner-mid-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .banner-mid h2 { font-size: clamp(18px, 3vw, 28px); font-weight: 900; max-width: 480px; line-height: 1.25; }
+    .banner-mid h2 span { color: var(--german-gold); }
+    .banner-mid p { margin-top: 8px; opacity: .85; font-size: 14px; }
+
+    /* TESTIMONIALS */
+    .testi-bg { background: #fff; padding: 40px 0; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .testi-card { background: var(--bg); border-radius: var(--radius); padding: 20px; border-left: 4px solid var(--primary); }
+    .testi-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .testi-meta { flex: 1; }
+    .testi-name { font-weight: 700; font-size: 14px; }
+    .testi-product { font-size: 12px; color: var(--text-light); }
+    .testi-text { font-size: 13.5px; color: var(--text); line-height: 1.6; }
+
+    /* RECENT REVIEWS */
+    .review-list { display: flex; flex-direction: column; gap: 12px; }
+    .review-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: #fff; border-radius: var(--radius); border: 1px solid var(--border); }
+    .review-img { width: 52px; height: 52px; background: var(--bg); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; }
+    .review-info { flex: 1; }
+    .review-prod { font-size: 13.5px; font-weight: 600; color: var(--text); }
+    .review-author { font-size: 12px; color: var(--text-light); }
+
+    /* FOOTER */
+    footer { background: #1a252f; color: #bdc3c7; padding-top: 48px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+    .footer-about .footer-logo { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .footer-about p { font-size: 13.5px; line-height: 1.7; }
+    .footer-col h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--german-red); }
+    .footer-col a { display: block; font-size: 13px; color: #bdc3c7; padding: 4px 0; transition: color .15s; }
+    .footer-col a:hover { color: var(--german-gold); }
+    .footer-socials { display: flex; gap: 10px; margin-top: 16px; }
+    .social-btn { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 16px; transition: background .2s; cursor: pointer; }
+    .social-btn:hover { background: var(--primary); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 40px; padding: 16px; text-align: center; }
+    .footer-bottom-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12.5px; }
+    .payment-icons { display: flex; align-items: center; gap: 8px; }
+    .pay-icon { background: #fff; color: #333; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+
+    /* FLOATING CONTACT */
+    .float-zalo { position: fixed; bottom: 24px; right: 24px; z-index: 998; display: flex; flex-direction: column; gap: 10px; }
+    .float-btn { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: transform .2s; border: none; }
+    .float-btn:hover { transform: scale(1.1); }
+    .fb-btn { background: #1877f2; color: #fff; }
+    .zalo-btn { background: #0068ff; color: #fff; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      nav .nav-inner { overflow-x: auto; }
+      .mega-menu { min-width: 340px !important; }
+    }
+    @media (max-width: 640px) {
+      .header-inner { flex-wrap: wrap; }
+      .header-search { order: 3; width: 100%; max-width: 100%; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+      .trust-inner { justify-content: flex-start; }
+    }
+
+    /* SECTION BG alt */
+    .section-alt { background: #fff; }
+    .section-alt .section { padding-top: 40px; padding-bottom: 40px; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="tb-inner">
+    <span>🚚 Miễn phí vận chuyển đơn từ 300.000đ</span>
+    <span>📦 Ship COD toàn quốc | Giao 2–4 ngày</span>
+    <span>✅ Hàng chính hãng 100% nội địa Đức</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">🍼</div>
+      <div class="logo-text">
+        <span class="name">hangxachtayduc24h</span>
+        <span class="tagline">Hàng xách tay Đức chính hãng</span>
+      </div>
+    </a>
+    <div class="header-search">
+      <input type="text" placeholder="Tìm kiếm sản phẩm Đức... (Aptamil, Penaten, Doppelherz...)" />
+      <button>🔍</button>
+    </div>
+    <div class="header-actions">
+      <div class="header-phone">
+        <span>Hotline</span>
+        <a href="tel:0988582486">0988 582 486</a>
+      </div>
+      <button class="cart-btn">🛒 Giỏ hàng <span class="cart-count">3</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MEGA NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-item nav-all-products">
+      <a href="#">🛍️ Tất cả sản phẩm</a>
+    </div>
+    <div class="nav-item">
+      <a href="#">Baby & Bé ▾</a>
+      <div class="dropdown mega-menu">
+        <div class="mega-col">
+          <h4>Chăm sóc bé</h4>
+          <a href="#">Chống hăm</a>
+          <a href="#">Dưỡng da Baby</a>
+          <a href="#">Tắm & Gội Baby</a>
+          <a href="#">Phụ kiện phòng tắm</a>
+        </div>
+        <div class="mega-col">
+          <h4>Dinh dưỡng</h4>
+          <a href="#">Sữa công thức</a>
+          <a href="#">Trà cho Baby</a>
+          <a href="#">Viên ngậm chắc răng</a>
+        </div>
+        <div class="mega-col">
+          <h4>Thương hiệu</h4>
+          <a href="#">Aptamil</a>
+          <a href="#">Hipp</a>
+          <a href="#">Bübchen</a>
+          <a href="#">Penaten</a>
+          <a href="#">Weleda</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Mẹ Bầu ▾</a>
+      <div class="dropdown mega-menu">
+        <div class="mega-col">
+          <h4>Sức khỏe mẹ bầu</h4>
+          <a href="#">Vitamin bà bầu</a>
+          <a href="#">Acid folic</a>
+          <a href="#">Sắt & Magie</a>
+          <a href="#">Dầu chống rạn</a>
+        </div>
+        <div class="mega-col">
+          <h4>Sau sinh</h4>
+          <a href="#">Dưỡng da sau sinh</a>
+          <a href="#">Phục hồi cơ thể</a>
+          <a href="#">Cho con bú</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Trang Điểm ▾</a>
+      <div class="dropdown mega-menu">
+        <div class="mega-col">
+          <h4>Mắt / Eyes</h4>
+          <a href="#">Phấn mắt</a>
+          <a href="#">Bút kẻ mắt</a>
+        </div>
+        <div class="mega-col">
+          <h4>Mặt / Face</h4>
+          <a href="#">Kem nền</a>
+          <a href="#">BB & CC Cream</a>
+          <a href="#">Phấn phủ</a>
+        </div>
+        <div class="mega-col">
+          <h4>Môi / Lips</h4>
+          <a href="#">Son thỏi</a>
+          <a href="#">Son nước</a>
+          <a href="#">Tẩy trang</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Chăm Sóc Da ▾</a>
+      <div class="dropdown mega-menu">
+        <div class="mega-col">
+          <h4>Da mặt</h4>
+          <a href="#">Làm sạch da</a>
+          <a href="#">Kem dưỡng ngày</a>
+          <a href="#">Kem dưỡng đêm</a>
+          <a href="#">Chống lão hóa</a>
+          <a href="#">Dưỡng môi</a>
+          <a href="#">Mặt nạ & Serum</a>
+        </div>
+        <div class="mega-col">
+          <h4>Cơ thể</h4>
+          <a href="#">Sữa tắm</a>
+          <a href="#">Khử mùi</a>
+          <a href="#">Dưỡng thể</a>
+          <a href="#">Kem dưỡng tay</a>
+          <a href="#">Nước hoa</a>
+        </div>
+        <div class="mega-col">
+          <h4>Tóc</h4>
+          <a href="#">Dầu gội</a>
+          <a href="#">Dầu xả</a>
+          <a href="#">Dưỡng & ủ tóc</a>
+          <a href="#">Nhuộm tóc</a>
+          <a href="#">Tạo kiểu tóc</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Thực Phẩm CN ▾</a>
+      <div class="dropdown mega-menu">
+        <div class="mega-col">
+          <h4>Vitamin</h4>
+          <a href="#">Vitamin A</a>
+          <a href="#">Vitamin B</a>
+          <a href="#">Vitamin C</a>
+          <a href="#">Vitamin D</a>
+          <a href="#">Vitamin tổng hợp</a>
+        </div>
+        <div class="mega-col">
+          <h4>Khoáng chất</h4>
+          <a href="#">Magie</a>
+          <a href="#">Canxi</a>
+          <a href="#">Kẽm</a>
+          <a href="#">Sắt</a>
+        </div>
+        <div class="mega-col">
+          <h4>Tăng cường CN</h4>
+          <a href="#">Dạ dày & tiêu hóa</a>
+          <a href="#">Gan mật</a>
+          <a href="#">Cơ & khớp</a>
+          <a href="#">Trí nhớ</a>
+          <a href="#">Tim mạch</a>
+        </div>
+        <div class="mega-col">
+          <h4>Thương hiệu</h4>
+          <a href="#">Doppelherz</a>
+          <a href="#">Tetesept</a>
+          <a href="#">Mivolis</a>
+          <a href="#">Kneipp</a>
+          <a href="#">Sanct Bernhard</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Răng Miệng ▾</a>
+      <div class="dropdown">
+        <a href="#">Kem đánh răng</a>
+        <a href="#">Bàn chải điện</a>
+        <a href="#">Đầu bàn chải điện</a>
+        <a href="#">Máy tăm nước</a>
+        <a href="#">Nước súc miệng</a>
+        <a href="#">Sản phẩm cho bé</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Thực Phẩm ▾</a>
+      <div class="dropdown">
+        <a href="#">Kẹo</a>
+        <a href="#">Trà, Cacao</a>
+        <a href="#">Sữa bột</a>
+        <a href="#">Dầu, dấm & gia vị</a>
+        <a href="#">Đường ăn kiêng</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#">Hộ Gia Đình ▾</a>
+      <div class="dropdown">
+        <a href="#">Bột giặt & Phụ giặt</a>
+        <a href="#">Vệ sinh nhà bếp</a>
+        <a href="#">Vệ sinh phòng tắm</a>
+        <a href="#">Dụng cụ phòng bếp</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="#" style="color:#FFCE00;">🏷️ Khuyến mãi</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🇩🇪 100% Chính hãng nội địa Đức</div>
+    <h1>Hàng xách tay Đức<br><span>Chất lượng — Uy tín — Giá tốt</span></h1>
+    <p>Hơn 500 sản phẩm Baby, Mẹ Bầu, Mỹ phẩm, Thực phẩm chức năng từ các thương hiệu hàng đầu nước Đức — Ship COD toàn quốc.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn btn-primary">🛒 Mua sắm ngay</a>
+      <a href="#" class="btn btn-secondary">📋 Xem danh mục</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>500+</strong><span>Sản phẩm</span></div>
+      <div class="hero-stat"><strong>10.000+</strong><span>Khách hàng</span></div>
+      <div class="hero-stat"><strong>5 ★</strong><span>Đánh giá TB</span></div>
+      <div class="hero-stat"><strong>2–4 ngày</strong><span>Giao toàn quốc</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><div class="trust-icon">🇩🇪</div><div><strong>Hàng chính hãng</strong><br><small>100% nội địa Đức</small></div></div>
+    <div class="trust-item"><div class="trust-icon">📦</div><div><strong>Ship COD toàn quốc</strong><br><small>Giao nhanh 2–4 ngày</small></div></div>
+    <div class="trust-item"><div class="trust-icon">🔄</div><div><strong>Đổi trả dễ dàng</strong><br><small>Trong vòng 7 ngày</small></div></div>
+    <div class="trust-item"><div class="trust-icon">💬</div><div><strong>Hỗ trợ 24/7</strong><br><small>Zalo & Facebook</small></div></div>
+    <div class="trust-item"><div class="trust-icon">🚚</div><div><strong>Miễn phí ship</strong><br><small>Đơn hàng từ 300k</small></div></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="section">
+  <div class="section-header">
+    <h2 class="section-title">Danh mục sản phẩm</h2>
+    <a href="#" class="see-all">Xem tất cả →</a>
+  </div>
+  <div class="cat-grid">
+    <a href="#" class="cat-card"><div class="cat-icon">🍼</div><div class="cat-name">Baby</div><div class="cat-count">29 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">🤱</div><div class="cat-name">Mẹ Bầu & Sau sinh</div><div class="cat-count">41 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">💊</div><div class="cat-name">Thực phẩm CN</div><div class="cat-count">180 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">💅</div><div class="cat-name">Chăm sóc da</div><div class="cat-count">260 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">💄</div><div class="cat-name">Trang điểm</div><div class="cat-count">14 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">🦷</div><div class="cat-name">Răng miệng</div><div class="cat-count">52 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">💆</div><div class="cat-name">Tóc</div><div class="cat-count">58 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">🥗</div><div class="cat-name">Thực phẩm</div><div class="cat-count">24 sản phẩm</div></a>
+    <a href="#" class="cat-card"><div class="cat-icon">🏠</div><div class="cat-name">Hộ gia đình</div><div class="cat-count">63 sản phẩm</div></a>
+  </div>
+</div>
+
+<!-- BEST SELLERS -->
+<div class="section-alt">
+<div class="section">
+  <div class="section-header">
+    <h2 class="section-title">🔥 Sản phẩm bán chạy nhất</h2>
+    <a href="#" class="see-all">Xem tất cả →</a>
+  </div>
+  <div class="prod-grid">
+
+    <div class="prod-card">
+      <span class="prod-badge">-10%</span>
+      <div class="prod-img">🥛<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Aptamil</div>
+        <div class="prod-name">Sữa Aptamil Kindermilch 1+, 800g</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(128)</span></div>
+        <div class="prod-price"><span class="price-main">740.000 ₫</span><span class="price-old">790.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">🧴<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Bübchen</div>
+        <div class="prod-name">Dầu gội dưỡng tóc bé Bübchen, 400ml</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(89)</span></div>
+        <div class="prod-price"><span class="price-main">185.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img">🌸<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Penaten</div>
+        <div class="prod-name">Kem chống hăm Penaten cream, 150ml</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(243)</span></div>
+        <div class="prod-price"><span class="price-main">210.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-8%</span>
+      <div class="prod-img">💊<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Doppelherz</div>
+        <div class="prod-name">Vitamin tổng hợp bà bầu, 60 viên</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(176)</span></div>
+        <div class="prod-price"><span class="price-main">460.000 ₫</span><span class="price-old">500.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img">🫖<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Hipp</div>
+        <div class="prod-name">Trà hoa cúc Hipp cho bé từ 4 tháng, 200g</div>
+        <div class="prod-rating"><span class="stars">★★★★☆</span><span class="rating-count">(67)</span></div>
+        <div class="prod-price"><span class="price-main">145.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">🛁<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Weleda</div>
+        <div class="prod-name">Sữa tắm hữu cơ Weleda cho bé, 200ml</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(54)</span></div>
+        <div class="prod-price"><span class="price-main">320.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img">🦷<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Ajona</div>
+        <div class="prod-name">Kem đánh răng y tế Ajona Stomaticum, 25ml</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(312)</span></div>
+        <div class="prod-price"><span class="price-main">80.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-3%</span>
+      <div class="prod-img">🦴<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Tetesept</div>
+        <div class="prod-name">Thuốc bổ xương khớp Tetesept Glucosamin, 40 viên</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(91)</span></div>
+        <div class="prod-price"><span class="price-main">290.000 ₫</span><span class="price-old">300.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <div class="prod-img">🌿<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Iberogast</div>
+        <div class="prod-name">Thuốc dạ dày Iberogast điều trị tiêu hóa, 20ml</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(204)</span></div>
+        <div class="prod-price"><span class="price-main">430.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-4%</span>
+      <div class="prod-img">🐟<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Doppelherz</div>
+        <div class="prod-name">Viên nang dầu cá Omega 3 Seefischol 1000, 80 viên</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(137)</span></div>
+        <div class="prod-price"><span class="price-main">360.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- BANNER MID - Mẹ Bầu -->
+<div class="banner-mid">
+  <div class="banner-mid-inner">
+    <div>
+      <h2>🤱 Góc mẹ bầu — <span>Đồng hành từ thai kỳ đến sau sinh</span></h2>
+      <p>Vitamin, kem dưỡng da bầu, dầu chống rạn, sữa dưỡng thể sau sinh... tất cả từ Đức.</p>
+    </div>
+    <a href="#" class="btn btn-primary">Khám phá ngay →</a>
+  </div>
+</div>
+
+<!-- NEW PRODUCTS -->
+<div class="section">
+  <div class="section-header">
+    <h2 class="section-title">✨ Sản phẩm mới</h2>
+    <a href="#" class="see-all">Xem tất cả →</a>
+  </div>
+  <div class="prod-grid">
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">🐟<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Doppelherz</div>
+        <div class="prod-name">Viên nang dầu cá Omega-3 1400, 30 viên</div>
+        <div class="prod-price"><span class="price-main">290.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">🧲<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Sunday Natural</div>
+        <div class="prod-name">Magie hữu cơ Glycinate Depot 150mg, 120 viên</div>
+        <div class="prod-price"><span class="price-main">750.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">💊<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Doppelherz</div>
+        <div class="prod-name">Viên ngậm Magnesium 500 B12 D3 Depot, 20 gói</div>
+        <div class="prod-price"><span class="price-main">260.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">🦑<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Altapharma</div>
+        <div class="prod-name">Omega 3 Nhuyễn thể Premium, 60 viên</div>
+        <div class="prod-price"><span class="price-main">520.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">⚡<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Vitasprint</div>
+        <div class="prod-name">Chai uống B12 tăng cường thể chất, 30 lọ</div>
+        <div class="prod-price"><span class="price-main">1.800.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">✂️<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Zwilling</div>
+        <div class="prod-name">Kéo cắt gà Zwilling Poultry Shears, 25cm</div>
+        <div class="prod-price"><span class="price-main">1.250.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">🍬<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Kneipp</div>
+        <div class="prod-name">Kẹo dẻo Magnesium B12 Gummi giảm mệt mỏi, 60 viên</div>
+        <div class="prod-price"><span class="price-main">480.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge new">Mới</span>
+      <div class="prod-img">🌡️<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Doppelherz</div>
+        <div class="prod-name">Vitamin D3 2000 IE hỗ trợ xương chắc khoẻ, 60 viên</div>
+        <div class="prod-price"><span class="price-main">210.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FEATURED PRODUCTS -->
+<div class="section-alt">
+<div class="section">
+  <div class="section-header">
+    <h2 class="section-title">⭐ Sản phẩm nổi bật</h2>
+    <a href="#" class="see-all">Xem tất cả →</a>
+  </div>
+  <div class="prod-grid">
+
+    <div class="prod-card">
+      <span class="prod-badge">-21%</span>
+      <div class="prod-img">🌸<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Bübchen</div>
+        <div class="prod-name">Dầu gội xả Bübchen Công chúa Rosalea, 230ml</div>
+        <div class="prod-rating"><span class="stars">★★★★☆</span><span class="rating-count">(45)</span></div>
+        <div class="prod-price"><span class="price-main">110.000 ₫</span><span class="price-old">140.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-6%</span>
+      <div class="prod-img">✨<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Elasten</div>
+        <div class="prod-name">Collagen thuỷ phân Elasten Trẻ hoá làn da, 28×25ml</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(93)</span></div>
+        <div class="prod-price"><span class="price-main">1.980.000 ₫</span><span class="price-old">2.100.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-7%</span>
+      <div class="prod-img">💊<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Doppelherz</div>
+        <div class="prod-name">Vitamin tổng hợp A-Z Depot, 40 viên</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(182)</span></div>
+        <div class="prod-price"><span class="price-main">260.000 ₫</span><span class="price-old">280.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-14%</span>
+      <div class="prod-img">🫧<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Neutrogena</div>
+        <div class="prod-name">Sữa rửa mặt Curcuma Clear tinh chất nghệ, 150ml</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(71)</span></div>
+        <div class="prod-price"><span class="price-main">250.000 ₫</span><span class="price-old">290.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-26%</span>
+      <div class="prod-img">🍊<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">CASO</div>
+        <div class="prod-name">Máy vắt cam CASO CP330 PRO</div>
+        <div class="prod-rating"><span class="stars">★★★★★</span><span class="rating-count">(38)</span></div>
+        <div class="prod-price"><span class="price-main">1.750.000 ₫</span><span class="price-old">2.350.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+    <div class="prod-card">
+      <span class="prod-badge">-9%</span>
+      <div class="prod-img">🌱<span class="flag">🇩🇪</span></div>
+      <div class="prod-info">
+        <div class="prod-brand">Sanct Bernhard</div>
+        <div class="prod-name">Tảo xoắn Spirulina Tabletten, 360 viên</div>
+        <div class="prod-price"><span class="price-main">490.000 ₫</span><span class="price-old">540.000 ₫</span></div>
+        <button class="add-cart">🛒 Thêm vào giỏ</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testi-bg">
+<div class="section">
+  <div class="section-header">
+    <h2 class="section-title">👥 Khách hàng nói gì về chúng tôi</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-header">
+        <div class="testi-avatar">LH</div>
+        <div class="testi-meta">
+          <div class="testi-name">Linh Hoàng</div>
+          <div class="testi-product">Sữa Aptamil 1+ ★★★★★</div>
+        </div>
+      </div>
+      <div class="testi-text">Con mình uống sữa Aptamil Đức từ hồi 1 tuổi, tiêu hóa tốt hơn hẳn so với sữa mua ở siêu thị. Shop giao nhanh, đóng gói cẩn thận!</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-header">
+        <div class="testi-avatar">MT</div>
+        <div class="testi-meta">
+          <div class="testi-name">Minh Tú</div>
+          <div class="testi-product">Kem chống hăm Penaten ★★★★★</div>
+        </div>
+      </div>
+      <div class="testi-text">Mình mua kem Penaten về dùng cho bé 3 tháng tuổi, hăm đỡ rất nhanh chỉ sau 2 ngày. Hàng chuẩn Đức, đóng gói an toàn.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-header">
+        <div class="testi-avatar">NA</div>
+        <div class="testi-meta">
+          <div class="testi-name">Ngọc Anh</div>
+          <div class="testi-product">Vitamin bà bầu Doppelherz ★★★★★</div>
+        </div>
+      </div>
+      <div class="testi-text">Uống vitamin Doppelherz suốt thai kỳ, thai nhi phát triển rất tốt. Giá ở đây rẻ hơn nhiều so với mua trực tiếp qua Đức gửi về.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-header">
+        <div class="testi-avatar">TV</div>
+        <div class="testi-meta">
+          <div class="testi-name">Trường Vũ</div>
+          <div class="testi-product">Sữa tắm John Player Special ★★★★★</div>
+        </div>
+      </div>
+      <div class="testi-text">Mua lần 2 rồi, sản phẩm chất lượng, mùi thơm đặc trưng của Đức. Shop tư vấn nhiệt tình và giao hàng đúng hẹn.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-header">
+        <div class="testi-avatar">ĐN</div>
+        <div class="testi-meta">
+          <div class="testi-name">Đức Nhân</div>
+          <div class="testi-product">Thuốc trị tiểu đêm Altapharma ★★★★★</div>
+        </div>
+      </div>
+      <div class="testi-text">Ba mình dùng thuốc Altapharma Sabal Kurbis được 3 tuần, cải thiện rõ rệt. Hàng đúng hạn sử dụng, tem nhãn chính hãng.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-header">
+        <div class="testi-avatar">NH</div>
+        <div class="testi-meta">
+          <div class="testi-name">Nguyễn Hà</div>
+          <div class="testi-product">Doppelherz Magnesium Calcium D3 ★★★★★</div>
+        </div>
+      </div>
+      <div class="testi-text">Mình uống canxi Doppelherz thấy ngủ ngon hơn, bớt chuột rút. Sản phẩm chính hãng, giá hợp lý. Sẽ tiếp tục ủng hộ shop.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-about">
+      <div class="footer-logo">🍼 hangxachtayduc24h</div>
+      <p>Website bán lẻ online sản phẩm Baby & Mẹ Bầu, Mỹ phẩm, Thực phẩm chức năng chính hãng nội địa Đức với giá tốt nhất — Cam kết chất lượng, Ship COD toàn quốc.</p>
+      <div class="footer-socials">
+        <div class="social-btn" title="Facebook">📘</div>
+        <div class="social-btn" title="Instagram">📷</div>
+        <div class="social-btn" title="TikTok">🎵</div>
+        <div class="social-btn" title="Zalo">💬</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Hỗ trợ khách hàng</h4>
+      <a href="#">Hướng dẫn mua hàng</a>
+      <a href="#">Chính sách giao hàng</a>
+      <a href="#">Chính sách đổi / trả hàng</a>
+      <a href="#">Điều khoản & điều kiện</a>
+      <a href="#">Bảo mật thông tin</a>
+      <a href="#">Thông tin liên hệ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Danh mục</h4>
+      <a href="#">Baby & Bé</a>
+      <a href="#">Mẹ bầu & Sau sinh</a>
+      <a href="#">Thực phẩm chức năng</a>
+      <a href="#">Chăm sóc da</a>
+      <a href="#">Trang điểm</a>
+      <a href="#">Tóc</a>
+      <a href="#">Răng miệng</a>
+      <a href="#">Hộ gia đình</a>
+    </div>
+    <div class="footer-col">
+      <h4>Thương hiệu nổi bật</h4>
+      <a href="#">Aptamil</a>
+      <a href="#">Doppelherz</a>
+      <a href="#">Penaten</a>
+      <a href="#">Bübchen</a>
+      <a href="#">Hipp</a>
+      <a href="#">Weleda</a>
+      <a href="#">Tetesept</a>
+      <a href="#">Kneipp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span>© 2025 hangxachtayduc24h.com — Bản quyền được bảo lưu</span>
+      <div class="payment-icons">
+        <span class="pay-icon">COD</span>
+        <span class="pay-icon">MoMo</span>
+        <span class="pay-icon">VNPAY</span>
+        <span class="pay-icon">Visa</span>
+        <span class="pay-icon">Mastercard</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CONTACT BUTTONS -->
+<div class="float-zalo">
+  <button class="float-btn zalo-btn" title="Chat Zalo">💬</button>
+  <button class="float-btn fb-btn" title="Facebook">📘</button>
+</div>
+
+</body>
+</html>
