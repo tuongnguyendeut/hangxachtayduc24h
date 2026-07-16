@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sản phẩm Baby & Mẹ Bầu nội địa Đức | Hàng Xách Tay Đức 24h</title>
+<meta name="description" content="Danh mục đầy đủ sản phẩm Baby & Mẹ Bầu nội địa Đức: sữa công thức, tắm gội, dưỡng da, vitamin... Lọc theo danh mục, thương hiệu, mức giá.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hangxachtayduc24h.com/san-pham.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
+
+<div class="topbar">
+  <div class="container">
+    <div class="tb-links"><a href="tel:0988582486">📞 0988 582 486</a><span>✉️ lienhe@hangxachtayduc24h.com</span></div>
+    <div class="tb-links"><a href="gioi-thieu.html">Giới thiệu</a><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a><a href="lien-he.html">Liên hệ</a></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a class="logo" href="index.html">
+      <span class="mark">HD</span>
+      <span class="word">Hàng Xách Tay<span>ĐỨC 24H</span></span>
+    </a>
+    <nav class="nav" id="mainNav" aria-label="Menu chính">
+      <a href="index.html">Trang chủ</a>
+      <a href="san-pham.html" class="on">Sản phẩm</a>
+      <a href="gioi-thieu.html">Giới thiệu</a>
+      <a href="chinh-sach.html">Chính sách</a>
+      <a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </nav>
+    <div class="head-actions">
+      <form class="head-search" data-search-form role="search">
+        <input type="text" name="q" placeholder="Tìm sữa, vitamin, dưỡng da...">
+        <button type="submit" aria-label="Tìm kiếm">🔍</button>
+      </form>
+      <a class="cart-link" href="gio-hang.html">🛒 <span class="cart-count" style="display:none">0</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container"><a href="index.html">Trang chủ</a><span class="sep">/</span><span id="bcLabel">Tất cả sản phẩm</span></div>
+</div>
+
+<main id="main">
+<section class="section container">
+  <div class="sec-head">
+    <div><span class="eyebrow">Cửa hàng</span><h2 id="pageTitle">Tất cả sản phẩm</h2></div>
+    <button class="btn btn-outline mobile-filter-toggle" id="filterToggle">🔍 Bộ lọc</button>
+  </div>
+
+  <div class="shop-layout">
+    <aside id="filterBox">
+      <div class="filter-box">
+        <h4>Danh mục</h4>
+        <div id="catFilters"></div>
+      </div>
+      <div class="filter-box">
+        <h4>Thương hiệu</h4>
+        <div id="brandFilters"></div>
+      </div>
+      <div class="filter-box">
+        <h4>Khoảng giá</h4>
+        <div class="price-range">
+          <input type="number" id="priceMin" placeholder="Từ (đ)" min="0" step="10000">
+          <span>–</span>
+          <input type="number" id="priceMax" placeholder="Đến (đ)" min="0" step="10000">
+        </div>
+        <button class="btn btn-primary btn-sm btn-block" id="applyPrice" style="margin-top:12px">Áp dụng</button>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="clearFilters">✕ Xoá tất cả bộ lọc</button>
+    </aside>
+
+    <div>
+      <div class="toolbar">
+        <span class="result-count" id="resultCount">0 sản phẩm</span>
+        <select id="sortSelect">
+          <option value="featured">Nổi bật</option>
+          <option value="price-asc">Giá: Thấp đến cao</option>
+          <option value="price-desc">Giá: Cao đến thấp</option>
+          <option value="rating">Đánh giá cao nhất</option>
+        </select>
+      </div>
+      <div class="p-grid" id="productGrid"></div>
+      <div id="noResult" style="display:none;text-align:center;padding:60px 0;color:var(--muted)">
+        <div style="font-size:48px;margin-bottom:14px">🔍</div>
+        <p>Không tìm thấy sản phẩm phù hợp với bộ lọc hiện tại.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div class="f-brand">🇩🇪 Hàng Xách Tay Đức 24h</div>
+      <p>Chuyên cung cấp sản phẩm Baby &amp; Mẹ Bầu chính hãng nội địa Đức — cam kết chất lượng, Ship COD toàn quốc.</p>
+      <p style="margin-top:12px">📞 <a href="tel:0988582486"><b style="color:#fff">0988 582 486</b></a><br>✉️ lienhe@hangxachtayduc24h.com</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/hangxachtayduc24h" aria-label="Facebook">📘</a>
+        <a href="https://zalo.me/0988582486" aria-label="Zalo">💬</a>
+      </div>
+    </div>
+    <div>
+      <h4>Hỗ trợ khách hàng</h4>
+      <ul class="f-links">
+        <li><a href="chinh-sach.html">Chính sách vận chuyển</a></li>
+        <li><a href="chinh-sach.html#doi-tra">Đổi trả hàng</a></li>
+        <li><a href="chinh-sach.html#bao-mat">Bảo mật thông tin</a></li>
+        <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Danh mục</h4>
+      <ul class="f-links">
+        <li><a href="san-pham.html?cat=sua-cong-thuc">Sữa công thức</a></li>
+        <li><a href="san-pham.html?cat=tam-goi-be">Tắm &amp; gội bé</a></li>
+        <li><a href="san-pham.html?cat=me-bau-sau-sinh">Mẹ bầu &amp; sau sinh</a></li>
+        <li><a href="san-pham.html?cat=vitamin-dinh-duong">Vitamin &amp; dinh dưỡng</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Về chúng tôi</h4>
+      <ul class="f-links">
+        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+        <li><a href="https://www.facebook.com/hangxachtayduc24h">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="pay-badges"><span>COD</span><span>MoMo</span><span>Chuyển khoản</span></div>
+      <div>© <span data-year></span> hangxachtayduc24h.com — Bản quyền được bảo lưu</div>
+    </div>
+  </div>
+</footer>
+
+<a class="zalo-fab" href="https://zalo.me/0988582486">💬 Chat Zalo</a>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  const params = new URLSearchParams(location.search);
+  const state = {
+    cats: params.get('cat') ? [params.get('cat')] : [],
+    brands: [],
+    q: params.get('q') || '',
+    min: null,
+    max: null,
+    sort: 'featured',
+  };
+
+  const catBox = document.getElementById('catFilters');
+  CATEGORIES.forEach(c => {
+    const count = PRODUCTS.filter(p => p.category === c.slug).length;
+    const label = document.createElement('label');
+    label.className = 'filter-opt';
+    label.innerHTML = `<input type="checkbox" value="${c.slug}" ${state.cats.includes(c.slug) ? 'checked' : ''}> <span>${c.icon} ${c.name}</span> <small>${count}</small>`;
+    label.querySelector('input').addEventListener('change', e => {
+      toggleValue(state.cats, c.slug, e.target.checked);
+      render();
+    });
+    catBox.appendChild(label);
+  });
+
+  const brandBox = document.getElementById('brandFilters');
+  BRANDS.forEach(b => {
+    const count = PRODUCTS.filter(p => p.brand === b).length;
+    if (!count) return;
+    const label = document.createElement('label');
+    label.className = 'filter-opt';
+    label.innerHTML = `<input type="checkbox" value="${b}"> <span>${b}</span> <small>${count}</small>`;
+    label.querySelector('input').addEventListener('change', e => {
+      toggleValue(state.brands, b, e.target.checked);
+      render();
+    });
+    brandBox.appendChild(label);
+  });
+
+  function toggleValue(arr, val, on) {
+    const i = arr.indexOf(val);
+    if (on && i === -1) arr.push(val);
+    if (!on && i > -1) arr.splice(i, 1);
+  }
+
+  document.getElementById('applyPrice').addEventListener('click', () => {
+    state.min = parseInt(document.getElementById('priceMin').value, 10) || null;
+    state.max = parseInt(document.getElementById('priceMax').value, 10) || null;
+    render();
+  });
+
+  document.getElementById('sortSelect').addEventListener('change', e => {
+    state.sort = e.target.value;
+    render();
+  });
+
+  document.getElementById('clearFilters').addEventListener('click', () => {
+    state.cats = []; state.brands = []; state.min = null; state.max = null; state.q = '';
+    document.querySelectorAll('#filterBox input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.getElementById('priceMin').value = '';
+    document.getElementById('priceMax').value = '';
+    history.replaceState(null, '', 'san-pham.html');
+    render();
+  });
+
+  function cardHTML(p) {
+    const priceHTML = p.oldPrice
+      ? `<span class="price"><del>${formatVND(p.oldPrice)}</del>${formatVND(p.price)}</span>`
+      : `<span class="price">${formatVND(p.price)}</span>`;
+    const badgeHTML = p.badge === 'sale'
+      ? `<span class="off">-${Math.round((1 - p.price / p.oldPrice) * 100)}%</span>`
+      : p.badge === 'new' ? `<span class="tag-new">Mới</span>` : '';
+    const stockHTML = p.stockNote ? `<span class="stock-tag">${p.stockNote}</span>` : '';
+    const stars = '★'.repeat(p.rating) + '☆'.repeat(5 - p.rating);
+    return `
+      <article class="card">
+        <div class="thumb">${badgeHTML}<a class="thumb-link" href="chi-tiet-san-pham.html?id=${p.id}" aria-label="Xem chi tiết ${p.name}"></a><span class="ph-icon">${p.icon}</span>${stockHTML}</div>
+        <div class="card-body">
+          <div class="p-brand">${p.brand}</div>
+          <a class="p-name" href="chi-tiet-san-pham.html?id=${p.id}">${p.name}</a>
+          <div class="p-origin">🇩🇪 ${p.origin}</div>
+          <div class="stars">${stars} <small>(${p.reviews} đánh giá)</small></div>
+          <div class="price-row" data-qty-scope>${priceHTML}<button class="qty-add" data-add-to-cart="${p.id}" aria-label="Thêm vào giỏ">+</button></div>
+        </div>
+      </article>`;
+  }
+
+  function render() {
+    let list = PRODUCTS.slice();
+    if (state.cats.length) list = list.filter(p => state.cats.includes(p.category));
+    if (state.brands.length) list = list.filter(p => state.brands.includes(p.brand));
+    if (state.q) {
+      const q = state.q.toLowerCase();
+      list = list.filter(p => p.name.toLowerCase().includes(q) || p.brand.toLowerCase().includes(q));
+    }
+    if (state.min != null) list = list.filter(p => p.price >= state.min);
+    if (state.max != null) list = list.filter(p => p.price <= state.max);
+
+    if (state.sort === 'price-asc') list.sort((a, b) => a.price - b.price);
+    if (state.sort === 'price-desc') list.sort((a, b) => b.price - a.price);
+    if (state.sort === 'rating') list.sort((a, b) => b.rating - a.rating);
+
+    const grid = document.getElementById('productGrid');
+    const noResult = document.getElementById('noResult');
+    document.getElementById('resultCount').textContent = list.length + ' sản phẩm';
+
+    if (!list.length) {
+      grid.innerHTML = '';
+      noResult.style.display = 'block';
+    } else {
+      noResult.style.display = 'none';
+      grid.innerHTML = list.map(cardHTML).join('');
+    }
+
+    Cart.updateBadge();
+
+    // Cập nhật tiêu đề trang theo danh mục đang chọn
+    if (state.cats.length === 1) {
+      const cat = getCategoryBySlug(state.cats[0]);
+      if (cat) {
+        document.getElementById('pageTitle').textContent = cat.name;
+        document.getElementById('bcLabel').textContent = cat.name;
+        document.title = cat.name + ' nội địa Đức | Hàng Xách Tay Đức 24h';
+      }
+    } else {
+      document.getElementById('pageTitle').textContent = 'Tất cả sản phẩm';
+      document.getElementById('bcLabel').textContent = 'Tất cả sản phẩm';
+    }
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>

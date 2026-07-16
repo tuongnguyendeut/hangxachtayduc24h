@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh toán | Hàng Xách Tay Đức 24h</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Bỏ qua đến nội dung chính</a>
+
+<div class="topbar">
+  <div class="container">
+    <div class="tb-links"><a href="tel:0988582486">📞 0988 582 486</a><span>✉️ lienhe@hangxachtayduc24h.com</span></div>
+    <div class="tb-links"><a href="gioi-thieu.html">Giới thiệu</a><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a><a href="lien-he.html">Liên hệ</a></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <a class="logo" href="index.html">
+      <span class="mark">HD</span>
+      <span class="word">Hàng Xách Tay<span>ĐỨC 24H</span></span>
+    </a>
+    <nav class="nav" id="mainNav" aria-label="Menu chính">
+      <a href="index.html">Trang chủ</a>
+      <a href="san-pham.html">Sản phẩm</a>
+      <a href="gioi-thieu.html">Giới thiệu</a>
+      <a href="chinh-sach.html">Chính sách</a>
+      <a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </nav>
+    <div class="head-actions">
+      <a class="cart-link" href="gio-hang.html">🛒 <span class="cart-count" style="display:none">0</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <div class="container"><a href="index.html">Trang chủ</a><span class="sep">/</span><a href="gio-hang.html">Giỏ hàng</a><span class="sep">/</span><span>Thanh toán</span></div>
+</div>
+
+<main id="main">
+<section class="section container">
+  <div id="checkoutRoot"></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <div class="f-brand">🇩🇪 Hàng Xách Tay Đức 24h</div>
+      <p>Chuyên cung cấp sản phẩm Baby &amp; Mẹ Bầu chính hãng nội địa Đức — cam kết chất lượng, Ship COD toàn quốc.</p>
+      <p style="margin-top:12px">📞 <a href="tel:0988582486"><b style="color:#fff">0988 582 486</b></a><br>✉️ lienhe@hangxachtayduc24h.com</p>
+    </div>
+    <div>
+      <h4>Hỗ trợ khách hàng</h4>
+      <ul class="f-links">
+        <li><a href="chinh-sach.html">Chính sách vận chuyển</a></li>
+        <li><a href="chinh-sach.html#doi-tra">Đổi trả hàng</a></li>
+        <li><a href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Danh mục</h4>
+      <ul class="f-links">
+        <li><a href="san-pham.html?cat=sua-cong-thuc">Sữa công thức</a></li>
+        <li><a href="san-pham.html?cat=vitamin-dinh-duong">Vitamin &amp; dinh dưỡng</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Về chúng tôi</h4>
+      <ul class="f-links">
+        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="pay-badges"><span>COD</span><span>MoMo</span><span>Chuyển khoản</span></div>
+      <div>© <span data-year></span> hangxachtayduc24h.com — Bản quyền được bảo lưu</div>
+    </div>
+  </div>
+</footer>
+
+<a class="zalo-fab" href="https://zalo.me/0988582486">💬 Chat Zalo</a>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  const root = document.getElementById('checkoutRoot');
+
+  /* ==========================================================
+     THÔNG TIN THANH TOÁN — THAY BẰNG THÔNG TIN THẬT CỦA BẠN
+     trước khi đưa website vào vận hành thực tế.
+     ========================================================== */
+  const PAYMENT_INFO = {
+    bank: { bankName: 'Vietcombank - CN Hà Nội', accountNumber: '0000 1234 5678', accountHolder: 'CONG TY TNHH HANG XACH TAY DUC 24H' },
+    momo: { phone: '0988 582 486', accountHolder: 'HANG XACH TAY DUC 24H' },
+  };
+
+  function renderForm() {
+    const lines = Cart.lines();
+    if (!lines.length) {
+      root.innerHTML = `
+        <div class="empty-state">
+          <div class="ic">🛒</div>
+          <h3>Giỏ hàng đang trống</h3>
+          <p>Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán.</p>
+          <a class="btn btn-primary" href="san-pham.html">Xem sản phẩm →</a>
+        </div>`;
+      return;
+    }
+
+    const subtotal = Cart.subtotal();
+    const shipFee = subtotal >= FREESHIP_THRESHOLD ? 0 : 25000;
+    const total = subtotal + shipFee;
+
+    const itemsHTML = lines.map(l => `
+      <div class="summary-line"><span>${l.product.name} × ${l.qty}</span><b>${formatVND(l.lineTotal)}</b></div>
+    `).join('');
+
+    root.innerHTML = `
+      <div class="sec-head"><div><h2>Thông tin thanh toán</h2></div></div>
+      <div class="cart-layout">
+        <div>
+          <form id="checkoutForm" novalidate>
+            <div class="filter-box">
+              <h4>1. Thông tin nhận hàng</h4>
+              <div class="form-row2">
+                <div class="form-group">
+                  <label>Họ và tên <span class="req">*</span></label>
+                  <input class="form-control" name="fullname" required>
+                  <div class="form-error">Vui lòng nhập họ tên</div>
+                </div>
+                <div class="form-group">
+                  <label>Số điện thoại <span class="req">*</span></label>
+                  <input class="form-control" name="phone" type="tel" required pattern="[0-9]{9,11}">
+                  <div class="form-error">Số điện thoại không hợp lệ</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Địa chỉ nhận hàng <span class="req">*</span></label>
+                <input class="form-control" name="address" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành">
+                <div class="form-error">Vui lòng nhập địa chỉ nhận hàng</div>
+              </div>
+              <div class="form-group">
+                <label>Ghi chú đơn hàng</label>
+                <textarea class="form-control" name="note" placeholder="Ví dụ: giao giờ hành chính, gọi trước khi giao..."></textarea>
+              </div>
+            </div>
+
+            <div class="filter-box">
+              <h4>2. Hình thức thanh toán</h4>
+
+              <label class="pm-option on" data-pm="cod">
+                <div class="pm-head">
+                  <input type="radio" name="payment" value="cod" checked>
+                  <span class="ic">📦</span>
+                  <b>Thanh toán khi nhận hàng (COD)</b>
+                </div>
+                <div class="pm-body"><p>Bạn kiểm tra hàng trước, thanh toán tiền mặt cho nhân viên giao hàng. Áp dụng toàn quốc.</p></div>
+              </label>
+
+              <label class="pm-option" data-pm="bank">
+                <div class="pm-head">
+                  <input type="radio" name="payment" value="bank">
+                  <span class="ic">🏦</span>
+                  <b>Chuyển khoản ngân hàng</b>
+                </div>
+                <div class="pm-body">
+                  <div class="qr-box">
+                    <div class="qr-ph" aria-hidden="true"></div>
+                    <div class="qr-info">
+                      <b>${PAYMENT_INFO.bank.bankName}</b>
+                      <div>STK: <span class="acc">${PAYMENT_INFO.bank.accountNumber}</span> <button type="button" class="copy-btn" data-copy="${PAYMENT_INFO.bank.accountNumber.replace(/\s/g,'')}">Sao chép</button></div>
+                      <div>Chủ TK: ${PAYMENT_INFO.bank.accountHolder}</div>
+                    </div>
+                  </div>
+                  <p class="form-hint">Nội dung chuyển khoản: <b id="bankNote">[Mã đơn hàng — hiển thị sau khi đặt hàng]</b>. Đơn hàng được xử lý sau khi shop xác nhận đã nhận thanh toán.</p>
+                </div>
+              </label>
+
+              <label class="pm-option" data-pm="momo">
+                <div class="pm-head">
+                  <input type="radio" name="payment" value="momo">
+                  <span class="ic">📱</span>
+                  <b>Ví MoMo</b>
+                </div>
+                <div class="pm-body">
+                  <div class="qr-box">
+                    <div class="qr-ph" aria-hidden="true"></div>
+                    <div class="qr-info">
+                      <b>Số điện thoại MoMo</b>
+                      <div class="acc">${PAYMENT_INFO.momo.phone} <button type="button" class="copy-btn" data-copy="${PAYMENT_INFO.momo.phone.replace(/\s/g,'')}">Sao chép</button></div>
+                      <div>Chủ tài khoản: ${PAYMENT_INFO.momo.accountHolder}</div>
+                    </div>
+                  </div>
+                  <p class="form-hint">Mở app MoMo, quét mã QR hoặc chuyển đến số điện thoại trên. Nội dung chuyển khoản: <b id="momoNote">[Mã đơn hàng — hiển thị sau khi đặt hàng]</b>.</p>
+                </div>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Xác nhận đặt hàng</button>
+          </form>
+        </div>
+
+        <div class="summary-box">
+          <h3>Đơn hàng của bạn</h3>
+          ${itemsHTML}
+          <div class="summary-line" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line)"><span>Tạm tính</span><b>${formatVND(subtotal)}</b></div>
+          <div class="summary-line"><span>Phí vận chuyển</span><b>${shipFee === 0 ? 'Miễn phí' : formatVND(shipFee)}</b></div>
+          <div class="summary-total"><span>Tổng cộng</span><span class="val">${formatVND(total)}</span></div>
+          <a class="btn btn-ghost btn-block" href="gio-hang.html">← Quay lại giỏ hàng</a>
+        </div>
+      </div>`;
+
+    // Chọn phương thức thanh toán
+    document.querySelectorAll('.pm-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        document.querySelectorAll('.pm-option').forEach(o => o.classList.remove('on'));
+        opt.classList.add('on');
+        opt.querySelector('input[type="radio"]').checked = true;
+      });
+    });
+
+    // Sao chép số tài khoản / số điện thoại
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        navigator.clipboard?.writeText(btn.getAttribute('data-copy'));
+        showToast('Đã sao chép: ' + btn.getAttribute('data-copy'));
+      });
+    });
+
+    // Validate + submit
+    document.getElementById('checkoutForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const form = e.target;
+      let valid = true;
+      ['fullname', 'phone', 'address'].forEach(name => {
+        const input = form.querySelector(`[name="${name}"]`);
+        const ok = input.checkValidity();
+        input.classList.toggle('invalid', !ok);
+        if (!ok) valid = false;
+      });
+      if (!valid) return;
+
+      const paymentMethod = form.querySelector('[name="payment"]:checked').value;
+      const orderCode = 'HD' + Date.now().toString().slice(-8);
+      const customer = {
+        fullname: form.fullname.value.trim(),
+        phone: form.phone.value.trim(),
+        address: form.address.value.trim(),
+        note: form.note.value.trim(),
+      };
+
+      renderConfirmation(orderCode, paymentMethod, customer, total, lines);
+      Cart.clear();
+    });
+  }
+
+  function renderConfirmation(orderCode, paymentMethod, customer, total, lines) {
+    const methodLabel = { cod: 'Thanh toán khi nhận hàng (COD)', bank: 'Chuyển khoản ngân hàng', momo: 'Ví MoMo' }[paymentMethod];
+
+    let paymentBlock = '';
+    if (paymentMethod === 'bank') {
+      paymentBlock = `
+        <div class="qr-box" style="margin-top:16px">
+          <div class="qr-ph" aria-hidden="true"></div>
+          <div class="qr-info">
+            <b>${PAYMENT_INFO.bank.bankName}</b>
+            <div>STK: <span class="acc">${PAYMENT_INFO.bank.accountNumber}</span></div>
+            <div>Chủ TK: ${PAYMENT_INFO.bank.accountHolder}</div>
+            <div style="margin-top:6px">Nội dung CK: <b>${orderCode}</b></div>
+          </div>
+        </div>`;
+    } else if (paymentMethod === 'momo') {
+      paymentBlock = `
+        <div class="qr-box" style="margin-top:16px">
+          <div class="qr-ph" aria-hidden="true"></div>
+          <div class="qr-info">
+            <b>Số điện thoại MoMo</b>
+            <div class="acc">${PAYMENT_INFO.momo.phone}</div>
+            <div style="margin-top:6px">Nội dung CK: <b>${orderCode}</b></div>
+          </div>
+        </div>`;
+    }
+
+    const zaloText = encodeURIComponent(`Xin chào shop, tôi vừa đặt đơn hàng ${orderCode} (${customer.fullname} - ${customer.phone}), hình thức thanh toán: ${methodLabel}. Nhờ shop xác nhận giúp!`);
+
+    root.innerHTML = `
+      <div class="empty-state" style="max-width:600px;margin:0 auto;text-align:center">
+        <div class="ic" style="color:var(--success)">✅</div>
+        <h2>Đặt hàng thành công!</h2>
+        <p>Cảm ơn <b>${customer.fullname}</b>, mã đơn hàng của bạn là:</p>
+        <p style="font-size:26px;font-weight:800;color:var(--navy);margin:10px 0 20px">${orderCode}</p>
+        <div class="filter-box" style="text-align:left">
+          <div class="summary-line"><span>Hình thức thanh toán</span><b>${methodLabel}</b></div>
+          <div class="summary-line"><span>Giao đến</span><b>${customer.address}</b></div>
+          <div class="summary-line"><span>Số điện thoại</span><b>${customer.phone}</b></div>
+          <div class="summary-total"><span>Tổng thanh toán</span><span class="val">${formatVND(total)}</span></div>
+          ${paymentBlock}
+        </div>
+        <p class="form-hint" style="margin:16px 0">Vui lòng nhắn Zalo kèm mã đơn hàng để shop xác nhận và xử lý đơn nhanh nhất.</p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="btn btn-primary btn-lg" href="https://zalo.me/0988582486?text=${zaloText}" target="_blank" rel="noopener">💬 Nhắn Zalo xác nhận đơn</a>
+          <a class="btn btn-outline" href="tra-cuu-don-hang.html">Tra cứu đơn hàng</a>
+          <a class="btn btn-ghost" href="index.html">Về trang chủ</a>
+        </div>
+      </div>`;
+  }
+
+  renderForm();
+})();
+</script>
+</body>
+</html>
